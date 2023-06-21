@@ -1,0 +1,405 @@
+body{
+    margin: 0px;
+}
+
+/* Body header*/
+#body-header{
+    height: 65vh;
+    opacity : 0.7; /* to make the image blur*/
+    background-image: url(./image_folder/brown.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment : fixed; /* to get parallex effect*/
+}
+
+/* Horizontal Lists*/
+.horizontal_list{
+    list-style: none; /* no bullets will be given to list*/
+    padding: 10px;
+    margin: 0px; 
+}
+
+.horizontal_list li{
+    display: inline-block;
+    margin: 0px 8px 8px 0px; /* adding left and right margins*/
+}
+
+.horizontal_list li a{
+    color: white;
+    text-decoration: none; /* underlines will be gone*/
+    transition: color 1s, border-bottom 4s;  /* to delay the changes when hover*/
+}
+
+.horizontal_list li a:hover{
+    color: darkgoldenrod;
+    border-bottom: 1px solid lightslategray;
+}
+
+.nav-menu{
+    border-bottom: 1px solid white; /* underline only where nav_mnu is present*/
+}
+
+.text_center{
+    /* we need to apply in many places so creating a class*/
+    text-align : center;
+}
+
+#name-social_icons{
+    margin-top: 20vh;
+}
+
+#my-name{
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.icons{
+    padding-bottom:5px;
+}
+
+.icons li a i{
+    padding: 10px;
+    font-size: 1rem;
+    margin: auto;
+    border-radius: 50%; /* to have circle aroung when we hover*/
+}
+.icons li a i:hover{
+    box-shadow: 0px 0px 6px 4px lightgrey;
+    /* horizontal_offset vertical_offset blur spread nad color*/
+    /* hor_offset - positive then right */
+    /* ver_offset - positive then bottom*/    
+}
+
+#about{
+    height: 100%;
+    width: 100%; 
+    position: relative; /* img of about section will come over header img */
+}
+
+#my-image{
+    height:12rem;
+    width:12rem;
+    background-image: cover;
+    margin: auto; /* to bring it to center*/
+    margin-top: -15vh; /* negative margin*/
+}
+
+#my-image img{
+    height: 100%; /* wrt div */
+    width: 100%;
+    border-radius: 50%; /*to make it circular*/
+    box-shadow: 0px 0px 6px 4px lightgrey;
+}
+
+#para{
+    height: 100%;
+    width: 50%;
+    padding: 10px;
+    font-size: 1.5rem;
+    margin: auto;
+    text-align: center;
+    color:grey;
+    line-height: 28px;
+}
+
+.text-highlight{
+    font-weight: 700;
+    text-decoration-color: aqua;
+}
+
+section{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+section:nth-child(2n){
+    background-color: rgb(218, 204, 204); /* alternate sections to change colour*/
+}
+
+section:nth-child(2n+1){
+    background-color: rgb(246, 242, 242); 
+}
+
+.section-heading{
+    width: auto;
+    padding : 20px 10px 10px;
+    font-weight: 400;
+}
+
+.section-heading span{
+    font-size: 40px;
+    color:rgb(130, 100, 100);
+    display: inline-block;
+    padding-top: 10px;
+    margin-right: 0.5rem;
+}
+
+.skills-display{
+    width: 55%;
+    /*height: 100px;
+    border: 2px solid black;*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display:flex;
+    flex-direction: row;
+}
+
+.skill-progress{
+    width: 7rem;
+    height: 1.4rem;
+    background-color: rgb(154, 148, 148);
+    border-radius: 0.8rem;
+    /*position:relative;*/
+    margin: 30px;
+}
+
+.eighty-five-percent {
+    width: 85%;
+    height: inherit; /* inherit the same height as parent*/
+    background-color: rgb(96, 45, 80);
+    position: relative;
+}
+
+.skill-name span{
+    color:white;
+    margin: 4px;
+    padding: 4px;
+    font-size: 1rem;   
+}
+
+.skill-progress>div{ /* meaning apply only to direct child of skill progress*/
+    border-radius: 20px 0px 0px 20px;
+}
+
+.eighty-percent {
+    width: 80%;
+    height: inherit; /* inherit the same height as parent*/
+    background-color: rgb(133, 68, 129);
+    position: relative;
+}
+
+.forty-percent {
+    width: 40%;
+    height: inherit; /* inherit the same height as parent*/
+    background-color: rgb(133, 68, 129);
+    position: relative;
+}
+
+.sixty-percent {
+    width: 60%;
+    height: inherit; /* inherit the same height as parent*/
+    background-color: rgb(133, 68, 129);
+    position: relative;
+}
+
+.fifty-percent {
+    width: 50%;
+    height: inherit; /* inherit the same height as parent*/
+    background-color: rgb(123, 40, 51);
+    position: relative;
+}
+
+/* timeline for education*/
+
+.timeline{
+    position: relative;
+    width: 75%;
+    padding-top: 15px;
+    margin-bottom: 50px;
+    /*border: 2px solid black;*/
+}
+
+.timeline-boxes{
+    position: relative;
+    width: 40%;
+    top:5%;
+    left: 5%;
+    margin: 5px;
+    min-height: 200px;
+    /*border: 2px solid black;*/
+}
+
+/* even children towards right*/
+.timeline-boxes:nth-child(2n){
+    left:53%;
+}
+
+.timeline-divider{
+    position: absolute;
+    height: 82%;
+    width: 0;
+    border: 2px dashed rgb(37, 19, 19);
+    top: 10%;
+    left:49.75%; 
+}
+
+.timeline-traveller{
+    position: sticky;
+    top: 8%;
+    z-index:2;
+    margin-top: -10px;
+    margin-left: -8px;
+}
+
+/* to add indicators*/
+.timeline-boxes:nth-child(2n+1)::after{
+    content:'';
+    position: absolute;
+    top:40%;
+    right:-11.5%;
+    border-radius: 50%;
+    height:0.5rem;
+    width: 0.5rem;
+    background-color:rgb(138, 135, 137);
+    z-index:1;
+}
+
+.timeline-boxes:nth-child(2n)::after{
+    content:'';
+    position: absolute;
+    top:20%;
+    left:-9.75%;
+    border-radius: 50%;
+    height:0.5rem;
+    width: 0.5rem;
+    background-color:dark rgb(138, 136, 141);
+    z-index:1;
+}
+
+@media screen and (max-width: 600px){
+    .timeline-divider{
+        left:1%;
+    }
+    .timeline-boxes{
+        left:12%;
+        width: 80%;
+    }
+    .timeline-boxes:nth-child(2n){
+        left:12%;
+        width:80%;
+    }
+
+    .timeline-boxes::after{
+        left:-12% !important;/* with imp the rule can't be overridden*/
+    }
+
+    html{
+        font-size: 15px;
+    }
+}
+
+
+.para-text{
+    font-size: 20px;
+    font-weight: 500;
+    font-style:oblique;
+    text-align:end;
+    text-decoration-color: brown;
+}
+
+.para-left{
+    font-size: 20px;
+    font-weight: 500;
+    font-style:oblique;
+    text-align:start;
+    text-decoration-color: brown;
+}
+
+/* contacts */
+
+
+#contact{
+    background: linear-gradient(to top right,rgb(163, 142, 142),rgb(184, 130, 130));
+}
+
+.contact-container{
+    width:100%;
+    height: 120%;
+    display: flex;
+    /*flex-wrap: wrap;*/
+   box-sizing: border-box;
+    margin-bottom: 20px;
+    
+}
+
+.send-msg{
+    box-sizing: border-box;
+    width: 40%;
+    height: auto;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 250px;
+}
+
+.get-in-touch{
+    box-sizing: border-box;
+    padding: 0px 20px;
+    margin: 15px;
+    height: auto;
+    width: 47%;
+    
+}
+
+.button{
+    margin-top: 40px;
+}
+
+#btn:hover{
+    background-color: rgb(140, 105, 105);
+    box-shadow: 0px 0px 6px 4px rgb(94, 86, 86);
+}
+
+.margin{
+    margin-bottom: 20px;
+}
+
+/*.contact-container .adress{
+    margin-bottom: 10px;
+}
+
+.contact-container .phone{
+    list-style-image: url(image/phone-call.png);
+    
+}
+.contact-container .email{
+    list-style-image: url(image/email.png);
+    
+}*/
+
+.contact-container ul li img{
+    height: 10px;
+    width: 10px;
+}
+.send-message div{
+    margin: 6px 23px 34px 12px;
+}
+.send-msg div input{
+    width: 300px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+.send-msg div button{
+    background-color: transparent;
+    margin-left: 95px;
+    padding: 10px;
+    border: 2px solid black;
+    font-size: 0.8rem;
+}
+
+
+
+
+
+
+
